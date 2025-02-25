@@ -1,0 +1,16 @@
+{% extends "master.html"%}
+{% block title %}Home{% endblock %}
+{% block content %}
+<div class="container-xl">
+    Name : <h1>{{persons.firstname}} {{persons.lastname}}</h1>
+    <hr/>
+    Age : <h2>{{persons.age}}</h2>
+    <hr/>
+    Email : <h2>{{persons.email}}</h2>
+    <hr/>
+    <div class="col-m">
+        Username : <h2>{{persons.username}}</h2>
+        Password : <h2>{{persons.password}}</h2>
+    </div>
+</div>
+{% endblock %}

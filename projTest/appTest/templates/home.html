@@ -1,0 +1,24 @@
+{% extends "master.html"%}
+{% block title %}Home{% endblock %}
+{% block content %}
+<h1>List Of Persons</h1>
+<br />
+<table class="table table-striped table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Details</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for x in persons %}
+      <tr>
+      <td>{{ x.firstname }}</td>
+      <td><a class="btn btn-success" href="details/{{x.id}}">See Detail</a> </td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
+{% block script %}
+{% endblock %}
